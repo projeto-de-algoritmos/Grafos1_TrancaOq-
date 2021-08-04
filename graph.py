@@ -1,8 +1,7 @@
 class Vertex:
-    def __init__(self, name, gender, spouse, wiki, realm):
+    def __init__(self, name, gender, wiki, realm):
         self.name = name
         self.gender = gender
-        self.spouse = spouse
         self.realm = realm
         self.wiki = wiki
         self.adjacent = {}
@@ -17,7 +16,7 @@ class Vertex:
         return self.name
 
     def get_data(self):
-        return self.name, self.gender, self.spouse, self.wiki, self.realm
+        return self.name, self.gender, self.wiki, self.realm
 
     def get_kinship(self, neighbor):
         return self.adjacent[neighbor]
@@ -33,9 +32,9 @@ class Graph:
     def __iter__(self):
         return iter(self.vert_dict.values())
 
-    def add_vertex(self, name, gender, spouse, wiki, realm):
+    def add_vertex(self, name, gender, wiki, realm):
         self.num_vert += 1
-        new_vertex = Vertex(name,gender,spouse,wiki,realm)
+        new_vertex = Vertex(name,gender,wiki,realm)
         self.vert_dict[name] = new_vertex
         return new_vertex
 
@@ -55,8 +54,4 @@ class Graph:
 
     def get_vertices(self):
         return list(self.vert_dict.keys())
-
-
-
-
 
