@@ -1,0 +1,47 @@
+materia,tranca
+Algoritmos e Programação de Computadores,"['Desenvolvimento de Software', 'Estruturas de Dados 1', 'Orientação a Objetos']"
+Desenho Industrial Assistido por Computador,['Interação Humano Computador']
+Engenharia e Ambiente,[]
+Introdução à Engenharia,[]
+Cálculo 1,"['Probabilidade e Estatística Aplicada à Engenharia', 'Projeto e Análise de Algoritmos', 'Cálculo 2']"
+Cálculo 2,['Métodos Numéricos para Engenharia']
+Física 1,[]
+Física 1 Experimental,[]
+Introdução à Álgebra Linear,"['Teoria de Eletrônica Digital 1', 'Prática de Eletrônica Digital 1']"
+Probabilidade e Estatística Aplicadaà Engenharia,[]
+Desenvolvimento de Software,[]
+Métodos Numéricos para Engenharia,[]
+Engenharia Econômica,['Gestão da Produção e Qualidade']
+Humanidades e Cidadania,[]
+Teoria de Eletrônica Digital 1,['Fundamentos de Arquiteturas de Computadores']
+Prática de Eletrônica Digital 1,['Fundamentos de Arquiteturas de Computadores']
+Orientação a Objetos,"['Projeto Integrador de Engenharia 1', 'Métodos de Desenvolvimento de Software', 'Paradigmas de Programação']"
+Matemática Discreta 1,['Matemática Discreta 2']
+Projeto Integrador de Engenharia 1,['Projeto Integrador de Engenharia 2']
+Matemática Discreta 2,['Sistemas de Banco de Dados 1']
+Fundamentos de Arquiteturas de Computadores,['Fundamentos de Sistemas Operacionais']
+Estruturas de Dados 1,"['Estruturas de Dados 2', 'Projeto e Análise de Algoritmos', 'Compiladores 1']"
+Métodos de Desenvolvimento de Software,"['Requisitos de Software', 'Testes de Software']"
+Gestão da Produção e Qualidade,['Qualidade de Software 1']
+Interação Humano Computador,['Qualidade de Software 1']
+Requisitos de Software,['Arquitetura e Desenho de Software']
+Sistemas de Banco de Dados 1,['Sistemas de Banco de Dados 1']
+Fundamentos de Sistemas Operacionais,"['Fundamentos de Redes de Computadores', 'Fundamentos de Sistemas Embarcados']"
+Compiladores 1,['Paradigmas de Programação']
+Estruturas de Dados 2,['Programação para Sistemas Paralelos e Distribuídos']
+Projeto e Análise de Algoritmos,[]
+Sistemas de Banco de Dados 2,[]
+Fundamentos de Redes de Computadores,['Programação para Sistemas Paralelos e Distribuídos']
+Arquitetura e Desenho de Software,['Paradigmas de Programação']
+Testes de Software,"['Gerência de Configuração e Evolução de Software', 'Técnicas de Programação em Plataformas Emergentes']"
+Qualidade de Software 1,[]
+Técnicas de Programação em Plataformas Emergentes,['Engenharia de Produto de Software']
+Paradigmas de Programação,[]
+Fundamentos de Sistemas Embarcados,[]
+Programação para Sistemas Paralelos e Distribuídos,[]
+Engenharia de Produto de Software,['Projeto Integrador de Engenharia 2']
+Gerência de Configuração e Evolução de Software,[]
+Estágio Supervisionado,[]
+Trabalho de Conclusão de Curso 1,['Trabalho de Conclusão de Curso 2']
+Projeto Integrador de Engenharia 2,[]
+Trabalho de Conclusão de Curso 2,[]
