@@ -1,4 +1,4 @@
-# Grafos2_HobbitRoot
+# Grafos1_TrancaOq?
 
 **Número da Lista**: X<br>
 **Conteúdo da Disciplina**: Grafos 1
@@ -12,9 +12,10 @@
 
 ## Sobre
 
-Projeto de Grafos 1 onde se cria uma arvore genealógica dos Hobbit citados em 'O senhor dos anéis',
-o projeto busca mostrar com base em um nome de um determinado Hobbit os seus parentes mais próximos
-como pais,filhos e cônjuges.
+Projeto de Grafos 1 onde se tem como objetivo a criação e melhoria nas consultas de 
+matérias do curso de engenharia de software da FGA que atualmente é bem ruim no atual sistema SIGAA,
+para isso o projeto consiste na criação de um grafo da grade do curso e utilizar algoritmos como DFS 
+para buscar por informações de matérias.
 
 ## Screenshots
 
