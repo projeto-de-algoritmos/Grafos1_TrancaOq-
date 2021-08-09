@@ -38,7 +38,7 @@ def get_dependents(graph, vertex):
     relations = []
     direct_depentens = []
     indirect_depentens = []
-    
+
     def rec_dfs(graph, vertex):
         visited[vertex] = True
 
@@ -54,7 +54,7 @@ def get_dependents(graph, vertex):
                 rec_dfs(graph, neighbor)
 
     rec_dfs(graph, vertex)
-    
+
     return [direct_depentens, indirect_depentens, relations]
 
 
@@ -64,7 +64,7 @@ def get_dependents(graph, vertex):
 #     visited = {key:False for key in graph.get_vertices()}
 #     target_vertex = vertex
 #     dependencies = []
-    
+
 #     def rec_dfs(graph, vertex):
 #         visited[vertex] = True
 #         dependencies.append(vertex)
@@ -80,11 +80,9 @@ def get_dependents(graph, vertex):
 #         return False
 
 #     for vertex in graph.get_vertices():
-        
 #         if not visited[vertex]:
 #             if rec_dfs(graph, vertex):
 #                 return dependencies
-    
 
 
 # ============================================================
@@ -95,7 +93,6 @@ def get_dependencies(graph, vertex):
     target_vertex = vertex
     dependencies = []
     dependencies_paths = []
-    
 
     def rec_dfs(graph, vertex):
         visited[vertex] = True
@@ -109,10 +106,9 @@ def get_dependencies(graph, vertex):
                     rec_dfs(graph, neighbor)
         dependencies.pop()
         visited[vertex] = False
-        
 
 
-    for vertex in graph.get_vertices():        
+    for vertex in graph.get_vertices():
         if not visited[vertex]:
             rec_dfs(graph, vertex)
 
