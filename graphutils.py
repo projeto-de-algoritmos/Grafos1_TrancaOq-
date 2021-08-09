@@ -49,40 +49,12 @@ def get_dependents(graph, vertex):
                     direct_depentens.append(neighbor)
                 else:
                     indirect_depentens.append(neighbor)
-                #print(f'{vertex} tranca {neighbor}')
                 relations.append((vertex, neighbor))
                 rec_dfs(graph, neighbor)
 
     rec_dfs(graph, vertex)
 
     return [direct_depentens, indirect_depentens, relations]
-
-
-# ============================================================
-
-# def get_dependencies(graph, vertex):
-#     visited = {key:False for key in graph.get_vertices()}
-#     target_vertex = vertex
-#     dependencies = []
-
-#     def rec_dfs(graph, vertex):
-#         visited[vertex] = True
-#         dependencies.append(vertex)
-#         if vertex == target_vertex:
-#             return True
-
-#         for neighbor in graph.neighbors[vertex]:
-
-#             if not visited[neighbor]:
-#                 if rec_dfs(graph, neighbor):
-#                     return True
-#         dependencies.pop()
-#         return False
-
-#     for vertex in graph.get_vertices():
-#         if not visited[vertex]:
-#             if rec_dfs(graph, vertex):
-#                 return dependencies
 
 
 # ============================================================
