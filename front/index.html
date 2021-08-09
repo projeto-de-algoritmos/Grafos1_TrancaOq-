@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>TrancaOq?</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  </head>
-  <body>
-      <div class="navbar navbar-dark bg-dark p-3 ps-5 shadow-lg mb-5">
-        <a class="navbar-brand d-flex align-items-center" href="#" >
-          <img src="/static/icon.png" alt="" width="80" height="50">
-          <h1 class="navbar-brand ms-2">TrancaOq?</h1>
-        </a>
-      </div>
+    <head>
+        <title>TrancaOq?</title>
+        <link rel="shortcut icon" type="image/jpg" href="/static/icon.png"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="navbar navbar-dark bg-dark p-3 ps-5 shadow-lg mb-5">
+            <a class="navbar-brand d-flex align-items-center" href="#" >
+                <img src="/static/icon.png" alt="" width="80" height="50">
+                <h1 class="navbar-brand ms-2">TrancaOq?</h1>
+            </a>
+        </div>
 
-      <div  style="margin:0 auto; width: 500px">
-          <form action="{{ url_for('index') }} " method = 'post' class="")>
-              <div align="center">
-                  <label for="fname">Escolha a matéria que deseja buscar:</label><br><br>
-                <select name="target" class="form-select" aria-label="Default select example">
-                  {% for i in vertices %}
-                  <option value={{i.replace(" ","_")}}>{{i}}</option>
-                  {% endfor %}
-                </select>
-                <button class="btn btn-dark mt-3" style="width:100%">Enviar</button>
-              </div>
-              <!-- <input type="text" id="target" name="target"><br><br> -->
-          </form>
-      </div>
-  </body>
+        <div  style="margin:0 auto; width: 500px">
+            <form action="{{ url_for('index') }} " method = 'post' class="")>
+                <div align="center">
+                    <label for="fname">Escolha a matéria que deseja buscar:</label><br><br>
+                    <select name="target" class="form-select" aria-label="Default select example">
+                        {% for i in vertices %}
+                        <option value={{i.replace(" ","_")}}>{{i}}</option>
+                                                   {% endfor %}
+                    </select>
+                    <button class="btn btn-dark mt-3" style="width:100%">Enviar</button>
+                </div>
+                <!-- <input type="text" id="target" name="target"><br><br> -->
+            </form>
+        </div>
+    </body>
 </html>

@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>TrancaOq?</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  </head>
-  <body>
-      <div class="navbar navbar-dark bg-dark p-3 ps-5 shadow-lg mb-5">
-        <a class="navbar-brand d-flex align-items-center" href="/" >
-          <img src="/static/icon.png" alt="" width="80" height="50">
-          <h1 class="navbar-brand ms-2">TrancaOq?</h1>
-        </a>
-      </div>
+    <head>
+        <title>TrancaOq?</title>
+        <link rel="shortcut icon" type="image/jpg" href="/static/icon.png"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="navbar navbar-dark bg-dark p-3 ps-5 shadow-lg mb-5">
+            <a class="navbar-brand d-flex align-items-center" href="/" >
+                <img src="/static/icon.png" alt="" width="80" height="50">
+                <h1 class="navbar-brand ms-2">TrancaOq?</h1>
+            </a>
+        </div>
 
-      <div align="center" class="mb-5">
-          {% if flag_di %}
-              <h3> <span class="badge bg-secondary">{{target}} tranca diretamente:</span></h3>
-              {% for i in dependent[0] %}
-              {{i}}
-              </br>
-              {% endfor %}
-          {% endif%}
+        <div align="center" class="mb-5">
+            {% if flag_di %}
+            <h3> <span class="badge bg-secondary">{{target}} tranca diretamente:</span></h3>
+            {% for i in dependent[0] %}
+            {{i}}
+            </br>
+            {% endfor %}
+            {% endif%}
 
-          {% if flag_in %}
-              <h3><span class="badge bg-secondary">{{target}} tranca indiretamente:</span></h3>
-              {% for i in dependent[1] %}
-              {{i}}
-              </br>
-              {% endfor %}
-          {% endif%}
+            {% if flag_in %}
+            <h3><span class="badge bg-secondary">{{target}} tranca indiretamente:</span></h3>
+            {% for i in dependent[1] %}
+            {{i}}
+            </br>
+            {% endfor %}
+            {% endif%}
 
-          {% if flag %}
-          <h3><span class="badge bg-secondary">{{target}} é trancado: </span></h3>
-              {% for i in dependencies %}
-              {{i}}
-              </br>
-              {% endfor %}
-          {% endif%}
-      </div>
-  </body>
+            {% if flag %}
+            <h3><span class="badge bg-secondary">{{target}} é trancado: </span></h3>
+            {% for i in dependencies %}
+            {{i}}
+            </br>
+            {% endfor %}
+            {% endif%}
+        </div>
+    </body>
 </html>
