@@ -20,13 +20,25 @@ grafo = Graph(edges = edges, directed = True)
 @app.route('/', methods=["GET","POST"])
 def index():
     if request.method == "GET":
-        return render_template("index.html")
+        vertices = grafo.get_vertices()
+        return render_template("index.html",vertices=vertices)
     else:
-        print("entrou")
-        target = str(request.form.get('target'))
+        target = str(request.form.get('target')).replace("_"," ")
         dependent = get_dependents(grafo, target)
+
+        flag_di = True
+        if len(dependent[0]) == 0:
+            flag_di = False
+
+        flag_in = True
+        if len(dependent[1]) == 0:
+            flag_in = False
+
         dependencie = get_dependencies(grafo, target)
-        return render_template('list.html', target=target, dependent=dependent, dependencies=dependencie)
+        flag = True
+        if len(dependencie) == 0:
+            flag = False
+        return render_template('list.html',flag_in=flag_in,flag_di=flag_di,flag=flag, target=target, dependent=dependent, dependencies=dependencie)
         # return f"<h1>{target}</h1>"
 
 
