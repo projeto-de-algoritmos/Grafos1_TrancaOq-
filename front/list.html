@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>TrancaOq?</title>
+  </head>
+  <body>
+      <h1 style="text-align:center">TrancaOq?</h1>
+
+      <div align="center">
+          <h3>{{target}} tranca diretamente:</h3>
+          {% for i in dependent[0] %}
+          {{i}}
+          </br>
+          {% endfor %}
+
+          <h3>{{target}} tranca indiretamente:</h3>
+          {% for i in dependent[1] %}
+          {{i}}
+          </br>
+          {% endfor %}
+
+          <h3>{{target}} eh trancado:</h3>
+          {% for i in dependencies %}
+          {{i}}
+          </br>
+          {% endfor %}
+      </div>
+  </body>
+</html>
