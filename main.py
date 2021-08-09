@@ -25,20 +25,8 @@ def index():
     else:
         target = str(request.form.get('target')).replace("_"," ")
         dependent = get_dependents(grafo, target)
-
-        flag_di = True
-        if len(dependent[0]) == 0:
-            flag_di = False
-
-        flag_in = True
-        if len(dependent[1]) == 0:
-            flag_in = False
-
         dependencie = get_dependencies(grafo, target)
-        flag = True
-        if len(dependencie) == 0:
-            flag = False
-        return render_template('list.html',flag_in=flag_in,flag_di=flag_di,flag=flag, target=target, dependent=dependent, dependencies=dependencie)
+        return render_template('list.html', target=target, dependent=dependent, dependencies=dependencie)
         # return f"<h1>{target}</h1>"
 
 

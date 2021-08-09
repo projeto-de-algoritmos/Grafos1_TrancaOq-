@@ -14,7 +14,7 @@
         </div>
 
         <div align="center" class="mb-5">
-            {% if flag_di %}
+            {% if dependent[0] | length > 0 %}
             <h3> <span class="badge bg-secondary">{{target}} tranca diretamente:</span></h3>
             {% for i in dependent[0] %}
             {{i}}
@@ -22,7 +22,7 @@
             {% endfor %}
             {% endif%}
 
-            {% if flag_in %}
+            {% if dependent[1] | length > 0 %}
             <h3><span class="badge bg-secondary">{{target}} tranca indiretamente:</span></h3>
             {% for i in dependent[1] %}
             {{i}}
@@ -30,7 +30,7 @@
             {% endfor %}
             {% endif%}
 
-            {% if flag %}
+            {% if dependencies | length > 0 %}
             <h3><span class="badge bg-secondary">{{target}} é trancado: </span></h3>
             {% for i in dependencies %}
             {{i}}
