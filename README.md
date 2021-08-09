@@ -19,18 +19,35 @@ para buscar por informações de matérias.
 
 ## Screenshots
 
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![screenshot1](./static/screenshot1.jpg)
+![screenshot2](./static/screenshot3.jpg)
+![screenshot3](./static/screenshot2.jpg)
 
 ## Instalação
 
 **Linguagem**: Python<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Framework**: Flask<br>
+
+``` bash
+pip install flask pandas
+
+python main.py
+
+```
+
 
 ## Uso
 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Acesse a porta 5000 apartir do link [http://127.0.0.1:5000/](http://127.0.0.1:5000/) e escolha uma disciplina para pesquisar
 
 ## Outros
 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Também é possivel fazer requisições para uma API da disciplina apartir das seguintes rotas:
+
+* [http://127.0.0.1:5000/dependents/<nome da disciplina>](http://127.0.0.1:5000/dependents/)
+
+    Retorna uma lista de discplinas na qual a disciplina pesquisada tranca
+
+* [http://127.0.0.1:5000/dependencies/<nome da disciplina>](http://127.0.0.1:5000/dependencies/)
+
+    Retorna uma lista de discplinas na qual a disciplina pesquisada é dependente 
