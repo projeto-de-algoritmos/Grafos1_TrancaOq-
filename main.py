@@ -33,7 +33,10 @@ def index():
         target = str(request.form.get('target')).replace("_"," ")
         dependent = get_dependents(grafo, target)
         # dependent[0] = [i for i in dependent[0] if i != '']
-        dependent[0] = ['Nenhuma matéria' for i in dependent[0] if i == '']
+        if '' in dependent[0]:
+            dependent[0] = ['Nenhuma matéria' for i in dependent[0] if i == '']
+        if '' in dependent[1]:
+            dependent[1] = ['Nenhuma matéria' for i in dependent[1] if i == '']
         dependencie = get_dependencies(grafo, target)
         return render_template('list.html', target=target, dependent=dependent, dependencies=dependencie)
         # return f"<h1>{target}</h1>"
