@@ -21,7 +21,9 @@ for lista in df:
 
 grafo = Graph(edges = edges, directed = True)
 
-
+def delete_element(list_object, pos):
+    if pos < len(list_object):
+        list_object.pop(pos)
 
 @app.route('/', methods=["GET","POST"])
 def index():
@@ -33,10 +35,15 @@ def index():
         target = str(request.form.get('target')).replace("_"," ")
         dependent = get_dependents(grafo, target)
         # dependent[0] = [i for i in dependent[0] if i != '']
+
         if '' in dependent[0]:
             dependent[0] = ['Nenhuma matéria' for i in dependent[0] if i == '']
+
         if '' in dependent[1]:
-            dependent[1] = ['Nenhuma matéria' for i in dependent[1] if i == '']
+            for i,value in enumerate(dependent[1]):
+                if value == '':
+                    delete_element(dependent[1],i )
+
         dependencie = get_dependencies(grafo, target)
         return render_template('list.html', target=target, dependent=dependent, dependencies=dependencie)
         # return f"<h1>{target}</h1>"
